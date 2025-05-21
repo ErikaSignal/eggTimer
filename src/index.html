@@ -2,11 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Egg Timer</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+
+    <section id="start" class='startPage'>
+      <h1>Let's time your egg!</h1>
+      <button onclick="goToSelection()">Start</button>
+    </section>
+
+    <section id="menu" class='view'>
+      <h4>What are you making today?</h4>
+      <div class="grid">
+      <button onclick="startTimer('Soft Boiled')">Soft Boiled</button>
+      <button onclick="startTimer('Hard Boiled')">Hard Boiled</button>
+    </div>
+    </section>
+
+    <section id="timer" class='view'>
+      <h4>Your egg is ready in..</h4>
+      <h2 id="countdown">00:00</h2>
+    </section>
+
+    <section id="ending" class="view">
+      <h1>Your egg is ready!</h1>
+      <button onclick="closeApp()">Close</button>
+    </section>
+
+    <script src="script.js"></script>
+    
   </body>
 </html>
